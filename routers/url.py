@@ -36,7 +36,7 @@ async def get_url_info(shortCode: str):
         return HTTPException(status_code=404, detail="URL not found")
     return res
 
-@router.delete("/{shortCode}", response_model=Url, description="Delete a short URL")
+@router.delete("/{shortCode}", description="Delete a short URL")
 async def delete_url(shortCode: str):
-    res = await delete_short_url(shortCode)
-    return res
+    await delete_short_url(shortCode)
+    return {"message": "URL deleted successfully"}

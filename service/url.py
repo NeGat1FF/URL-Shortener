@@ -35,8 +35,6 @@ async def delete_short_url(short_code: str):
     query = "DELETE FROM urls WHERE short_code = %s;"
     async with get_db_connection() as cur:
         await cur.execute(query, (short_code,))
-        result = await cur.fetchone()
-    return Url.model_validate(result)
 
 async def update_visit_count(short_code: str):
     query = "UPDATE urls SET visit_count = visit_count + 1 WHERE short_code = %s;"
