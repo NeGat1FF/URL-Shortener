@@ -1,0 +1,10 @@
+CREATE TABLE urls (
+    id SERIAL PRIMARY KEY,
+    url TEXT NOT NULL,
+    short_code VARCHAR(6) NOT NULL UNIQUE,
+    visit_count INT NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX urls_short_url_idx ON urls (short_code);
