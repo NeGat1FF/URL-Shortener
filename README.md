@@ -104,6 +104,4 @@ This is a simple URL Shortener API built with Python. It allows users to shorten
 
 Contributions are welcome! Please open an issue or submit a pull request for any changes.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+https://roadmap.sh/projects/url-shortening-service
